@@ -75,8 +75,368 @@
         <link rel="stylesheet" href="/styles/global.css" />
 
         <!-- JAVASCRIPT SCRIPTS -->
+        <script defer src="/js/nav.js"></script>
         <script src="/js/modal.js" defer></script>
+        <script defer src="/js/deferred-video.js"></script>
         <script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js"></script>
     </head>
-    <body></body>
+
+    <body>
+        <!--Best practice for web accessinility a11y. By placing a "Skip to main content" link at the absolute top, keyboard users can hit Enter immediately and jump straight down to your <main id="main"> tag, bypassing the header entirely.-->
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        <!-- SECTION HEADER -->
+        <header class="site-header">
+            <nav class="nav-bar">
+                <div class="nav-brand">
+                    <a href="/">
+                        <img class="nav-logo" src="/images/ui/logos/nav-logo.svg" alt="SHEMA logo" />
+                    </a>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/why-jewish-context/">Why Jewish Context</a></li>
+                    <li><a href="/explore/">Explore</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/support/">Support</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="theme-toggle" type="button" aria-label="Toggle theme">
+                        🌓
+                    </button>
+
+                    <button
+                        class="nav-toggle"
+                        type="button"
+                        aria-label="Open menu"
+                        aria-controls="mobileMenu"
+                        aria-expanded="false"
+                    >
+                        <img src="/images/ui/icons/hamburger.svg" alt="" aria-hidden="true" />
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile full screen menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <button class="mobile-close" aria-label="Close menu">
+                <img src="/images/ui/icons/close-icon.svg" alt="close menu icon" />
+                </button>
+                <ul class="mobile-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/why-jewish-context/">Why Jewish Context</a></li>
+                <li><a href="/explore/">Explore</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/support/">Support</a></li>
+                <li><a href="/faq/">FAQ</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main id="main" tabindex="-1">
+
+            <!-- HERO SECTION ---------------------------------------->
+            <section class="hero">
+                <div class="container">
+                    <h1>SHEMA: Discover the Bible’s Jewish Roots</h1>
+                    <p class="h1-subtitle">
+                        Step into the world of Scripture as its first hearers did. Dive into Hebrew language, rabbinic
+                        culture, and Jewish wisdom woven into every verse—brought to life by AI and Messianic
+                        scholarship.
+                    </p>
+
+                    <div class="buttons-wrapper">
+                        <a class="button primary-bk" href="/contact/"> JOIN THE WAITLIST </a>
+                        <a class="button outline-bk" href="/explore/">EXPLORE APP</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CAROUSEL IMAGE SECTION ---------------------------------------->
+            <section class="product">
+                <div class="product-screens">
+                    <img
+                        src="/images/pages/home/slide01@2x.png"
+                        alt="SHEMA app screens carousel"
+                        width="1920"
+                        height="1080"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
+                    />
+                </div>
+            </section>
+
+            <!-- CORE FEATURES SECTION ---------------------------------------->
+            <section class="core-features">
+                <div class="container">
+                    <h2>Core Features of SHEMA: The Jewish Context Bible App</h2>
+                    <div class="cards-wrapper">
+
+                        <div class="feature-card-1">
+                            <h3>Chapter-by-Chapter AI-Powered<br />Jewish Commentary</h3>
+                            <p>
+                                Unlock insights on every chapter of the Bible, rooted in Messianic Jewish sources,
+                                rabbinic commentary, and cultural context. Explore Hebrew word meanings, Jewish idioms,
+                                and ancient customs that open new layers of Scripture.
+                            </p>
+                            <a class="blog-link" data-overlay-link href="/articles/2025-07-28-chapter-by-chapter-ai-commentary/">
+                                Learn More
+                            </a>
+                        </div>
+
+                        <div class="feature-card-2">
+                            <h3>Study Scripture Through 7<br />Authentic Jewish Lenses</h3>
+                            <p>
+                                Read the Bible as a first-century disciple would—through history, culture, language,
+                                literature, geography, theology, and rabbinic wisdom. Each lens deepens your understanding
+                                of God’s Word in its original setting.
+                            </p>
+                            <a class="blog-link" data-overlay-link href="/articles/2025-07-28-seven-authentic-jewish-lenses/">
+                                Learn More
+                            </a>
+                        </div>
+
+                        <div class="feature-card-3">
+                            <h3>Interactive, Searchable Conversations with AI</h3>
+                            <p>
+                                Ask your deepest Bible questions and receive context-rich, Jewish-informed answers. Save
+                                and revisit Q&As to keep building your journey of discovery.
+                            </p>
+                            <a class="blog-link" data-overlay-link href="/articles/2025-07-28-interactive-conversations-with-ai/">
+                                Learn More
+                            </a>
+                        </div>
+
+                        <div class="feature-card-4">
+                            <h3>Experience the Jewish Roots<br />of Christian Faith</h3>
+                            <p>
+                                See how Jesus (Yeshua) taught, lived, and fulfilled Scripture within His Jewish world.
+                                Rediscover the imagery, idioms, and rabbinic teaching methods that bring His words to
+                                life.
+                            </p>
+                            <a class="blog-link" data-overlay-link href="/articles/2025-07-28-experience-jewish-roots-of-christian-faith/">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JOURNEY SECTION ---------------------------------------->
+            <section class="journey">
+                <div class="container">
+                    <div class="title-wrapper">
+                        <h2>The SHEMA Journey: Join a Movement to Rediscover the Bible’s Jewish Context</h2>
+                        <p class="h2-subtitle">
+                            Be the first to explore a revolutionary Bible study app that restores Scripture’s Jewish
+                            heritage and rabbinic depth. Here’s how you can get involved:
+                        </p>
+                    </div>
+
+                    <div class="cards-wrapper">
+                        <div class="feature-card-5">
+                            <div class="journey-icons">
+                                <img src="./images/pages/home/waitlist-icon.png" alt="waitlist icon letter made of clay" loading="lazy" />
+                            </div>
+                            <h3>Join the Waitlist</h3>
+                            <p>
+                                Be first in line for exclusive features, blogs, and updates on Jewish context in the
+                                Bible.
+                            </p>
+                        </div>
+
+                        <div class="feature-card-7">
+                            <div class="journey-icons">
+                                <img src="./images/pages/home/support-icon.png" alt="support icon hand givin a coin made of clay" loading="lazy"  />
+                            </div>
+                            <h3>Support the Mission</h3>
+                            <p>
+                                Partner with us to make authentic Jewish context accessible to every believer through
+                                donations and sharing.
+                            </p>
+                        </div>
+
+                        <div class="feature-card-6">
+                            <div class="journey-icons">
+                                <img src="./images/pages/home/explore-icon.png" alt="explore the app icon cellphone made of clay" loading="lazy"/>
+                            </div>
+                            <h3>Explore What’s Coming</h3>
+                            <p>
+                                Get a glimpse of how SHEMA will unfold—AI commentary, rabbinic teaching, and cultural insights in every chapter.
+                            </p>
+                        </div>
+
+                        <div class="feature-card-8">
+                            <div class="journey-icons">
+                                <img src="./images/pages/home/feedback-icon.png" alt="feedback icon of a hand in a text bubble made of clay" loading="lazy" />
+                            </div>
+                            <h3>Shape the Experience</h3>
+                            <p>
+                                Preview concepts, share feedback, and shape the app as it’s being created.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SUPPORT CARD SECTION ---------------------------------------->
+            <section class="support">
+                <div class="feature-card-main">
+                    <div class="title-wrap">
+                        <h2>Support the SHEMA Movement</h2>
+                        <p class="h2-subtitle">“Help Restore the Depth of Scripture as Jesus Taught and Lived&nbsp;It”</p>
+                    </div>
+                    <p class="p-large">
+                        SHEMA exists to help believers experience Scripture in its original Jewish context. Jesus
+                        didn’t come to erase the Torah—He came to fulfill it (Matthew 5:17). Our mission is to uncover
+                        those depths by exploring Hebrew words, Jewish culture, and rabbinic traditions—insights often
+                        flattened by Western interpretation.
+                        <br>
+                        Your generous, tax-deductible gift fuels this mission: powering the free AI-driven Bible study
+                        app, expanding resources, and reaching more believers hungry to see Scripture as it was first
+                        lived and taught. Every gift strengthens the movement to bring God’s Word back into its
+                        original Jewish voice.
+                    </p>
+                    <p class="p-large">While every gift matters, <strong>monthly support makes the greatest impact.</strong> Recurring donations help us
+                        plan ahead, sustain the work consistently, and grow the team—so the app and its resources continue
+                        to flourish for years to come.
+                    </p>
+                    <div class="buttons-wrapper">
+                        <a class="button primary-wh" zeffy-form-link="https://www.zeffy.com/embed/donation-form/help-build-shema-bringing-the-bibles-jewish-context-to-life?modal=true">DONATE NOW</a>
+                        <a class="button outline-wh" href="/contact/">JOIN THE WAITLIST</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PARTNERS SECTION ---------------------------------------->
+            <section class="partners">
+                <div class="container">
+                    <img src="./images/pages/home/placeholder-logo.svg" alt="logo-placeholder" loading="lazy" width="120" height="60" />
+                    <img src="./images/pages/home/rilo-logo.svg" alt="Rooted In Love Outreach logo" loading="lazy" width="120" height="60" />
+                    <img src="./images/pages/home/placeholder-logo.svg" alt="logo-placeholder" loading="lazy" width="120" height="60" />
+                </div>
+                <h3 class="h2-subtitle">Become a partner</h3>
+            </section>
+
+            <!-- FAQ SECTION ---------------------------------------->
+            <section class="faq">
+                <div class="container">
+                    <h2>Frequently Asked Questions</h2>
+                    <details>
+                        <summary>
+                            <span class="h3">Why is Jewish context important for Bible study?</span>
+                        </summary>
+                        <p class="h3-card-subtitle">
+                            Jewish context reveals the rabbinic meaning behind Jesus’ teachings, the Hebrew imagery,
+                            idioms, and customs woven into Scripture. Western translations often skim the surface,
+                            missing parables, remez (hidden clues), and everyday expressions familiar to His Jewish
+                            audience. Studying Scripture this way brings depth, clarity, and transformation to your
+                            faith.<br/><br/>
+
+                            <a href="/blog/2025-08-28-problem-with-losing-context/" data-overlay-link>
+                                👉 Learn more about the Eastern context often missed in translation
+                            </>
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <span class="h3"> How does SHEMA’s AI provide Jewish commentary and insight? </span>
+                        </summary>
+                        <p class="h3-card-subtitle">
+                            SHEMA’s AI is trained on trusted Messianic Jewish sources, rabbinic commentary, and
+                            scholarly insight. It delivers verse-by-verse context, highlighting language, history, and
+                            culture so you can see Scripture through Jewish eyes.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>
+                            <span class="h3">What makes SHEMA different from other Bible apps?</span>
+                        </summary>
+                            <p class="h3-card-subtitle">
+                                SHEMA takes you deeper—rooted in the Jewish world of Jesus, not Western categories.
+                                By placing heavy weight on the culture, idioms, and honor–shame values of His time,
+                                SHEMA helps you hear Scripture as His disciples first heard it.
+                            </p>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CALLOUT SECTION ---------------------------------------->
+            <section class="cta">
+                <div class="container">
+                    <div class="title-wrap">
+                        <h2>Ready to Rediscover the Bible?</h2>
+                        <p class="h2-subtitle">Join the SHEMA early access community</p>
+                    </div>
+
+                    <div class="waitlist-form">
+                        <div class="text-wrapper">
+                            <ul>
+                            <li>Be first to explore AI-powered features rooted in Jewish context.</li>
+                            <li>Shape the app with your feedback before launch.</li>
+                            <li>Get exclusive updates and insights you won’t find anywhere else.</li>
+                            </ul>
+                        </div>
+
+                        <div class="form-wrap">
+                            <p>Your privacy is protected.<br />No spam, ever.</p>
+                            <div class="buttons-wrapper">
+                                <a class="button primary-bk" href="/contact/">JOIN THE WAITLIST</a>
+                                <a class="button outline-bk" href="/explore/">EXPLORE APP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <nav aria-label="footer">
+                    <ul class="nav-footer">
+                        <li><a href="/"><img class="footer-logo" src="/images/ui/logos/nav-logo.svg" alt="SHEMA logo" /></a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/why-jewish-context/">Why Jewish Context</a></li>
+                        <li><a href="/explore/">Explore</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/support/">Support</a></li>
+                        <li><a href="/faq/">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="xsmall" role="contentinfo">
+                © SHEMA — A project by Rooted In Love Outreach<br />Built for the One I love—with all my heart,
+                all my soul, and all my might.
+            </p>
+        </footer>
+        <dialog id="site-modal" class="modal-content-container">
+            <button class="modal-close-button" aria-label="Close overlay">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M12.12 10l4.07-4.06a1.5 1.5 0 0 0-2.11-2.12L10 7.88 5.94 3.81A1.5 1.5 0 1 0 3.82 5.93L7.88 10 3.81 14.06a1.5 1.5 0 0 0 0 2.12 1.51 1.51 0 0 0 2.13 0L10 12.12l4.06 4.07a1.45 1.45 0 0 0 1.06.44 1.5 1.5 0 0 0 1.06-2.56Z"></path>
+                </svg>
+            </button>
+
+            <article class="modal-content-wrapper">
+                <div id="modal-header-image-container"></div>
+
+                <div id="modal-body" class="modal-body">
+                    <p id="modal-loading" class="modal-loading" aria-live="polite">
+                        <span class="loading-spinner" aria-hidden="true"></span>
+                        Loading article...
+                    </p>
+
+                    <div id="modal-content" class="modal-content"></div>
+                </div>
+            </article>
+        </dialog>
+    </body>
 </html>
